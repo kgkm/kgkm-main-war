@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>hu.javaforum</groupId>
+        <artifactId>javaforum20-parent</artifactId>
+        <version>1.0.19</version>
+    </parent>
+
+    <groupId>info.kgkm</groupId>
+    <artifactId>kgkm-main-war</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Kilogram Kilometer Info Main</name>
+    <description>Kilogram Kilometer Info Main</description>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>http://traq.javaforum.hu/browse/KGKM</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>http://jenkins.javaforum.hu/job/kgkm-main/</url>
+    </ciManagement>
+
+    <scm>
+        <connection>scm:svn:https://github.com/kgkm/kgkm-main-war/trunk/kgkm-main-war/</connection>
+        <developerConnection>scm:svn:https://github.com/kgkm/kgkm-main-war/trunk/kgkm-main-war/</developerConnection>
+        <url>scm:svn:https://github.com/kgkm/kgkm-main-war/trunk/kgkm-main-war/</url>
+    </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.api-client</groupId>
+                <artifactId>google-api-client</artifactId>
+                <version>1.20.0</version>
+            </dependency>
+            <dependency>
+                <groupId>hu.javaforum</groupId>
+                <artifactId>javaforum20-commons</artifactId>
+                <version>1.0.6</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.facebook4j</groupId>
+                <artifactId>facebook4j-core</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.12</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- The internal dependencies -->
+
+        <!-- The external dependencies -->
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>hu.javaforum</groupId>
+            <artifactId>javaforum20-commons</artifactId>
+        </dependency>    
+        <dependency>
+            <groupId>org.facebook4j</groupId>
+            <artifactId>facebook4j-core</artifactId>
+        </dependency>  
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- The container provided dependencies -->
+        <dependency> 
+            <groupId>javax</groupId> 
+            <artifactId>javaee-api</artifactId> 
+            <scope>provided</scope>
+        </dependency> 
+
+        <!-- The 'transitive' external dependencies -->
+
+        <!-- The 'transitive' container provided dependencies -->
+    </dependencies>
+</project>
