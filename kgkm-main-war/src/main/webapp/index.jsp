@@ -3,78 +3,68 @@
 <html>
     <head>
         <title>Kilogram-Kilometer</title>
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kgkm.info/"/>
-
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-indigo.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-
-        <link rel="alternate" type="application/atom+xml" title="Feed of recent content" href="feeds">
+        <%@include file="head.jsp" %>
     </head>
-    <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout-icon"></div>
-                <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">
-                        <img src="images/logo.png" style="height: 50px;" alt="Kilogram-Kilometer logo">
-                    </span>
-                    <div class="mdl-layout-spacer">
-                        <div class="icon material-icons mdl-badge" data-badge="1">account_box</div>
-                    </div>
-                    <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="#">The story</a>
-                        <a class="mdl-navigation__link" href="#">About us</a>
-                    </nav>
-                </div>
-            </header>
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">
-                    <img src="images/logo.png" style="height: 50px;" alt="Kilogram-Kilometer logo">
-                </span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="#">The story</a>
-                    <a class="mdl-navigation__link" href="#">About us</a>
-                </nav>
-            </div>
+    <body class="mdl-kgkm mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+        <div class="mdl-layout mdl-js-layout">
+            <%@include file="header.jsp" %>
             <main class="mdl-layout__content">
-                <div class="demo-grid-3 mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">
-                    </div>
-                    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-                    </div>
-                </div>
-
-                <footer class="mdl-mini-footer">
-                    <div class="mdl-mini-footer--left-section">
-                        <div class="mdl-logo">
-                            More Information
+                <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <form action="#">
+                                <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                                    <h4 class="mdl-cell mdl-cell--12-col">KgKm by barcode</h4>
+                                    <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                        <div class="section__circle-container__circle mdl-color--primary">
+                                        </div>
+                                    </div>
+                                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" pattern="[0-9]+" id="barcode" value="5998324185020" />
+                                            <label class="mdl-textfield__label" for="barcode">Barcode</label>
+                                            <span class="mdl-textfield__error">Input is not a barcode!</span>
+                                        </div>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mdl-card__actions">
+                                </div>
+                            </form>
                         </div>
-                        <ul class="mdl-mini-footer--link-list">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Privacy and Terms</a></li>
-                            <li><a href="#">User Agreement</a></li>
+                    </section>
+
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                                <h4 class="mdl-cell mdl-cell--12-col">Kilogram-Kilometer</h4>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    The <strong>kilogram-kilometer</strong> or <strong>kgkm</strong> is a
+                                    transportation measurement unit, describes in one number of the
+                                    cargo item's journey from producer to consumer and
+                                    used when assessing the environmental impact of items.
+                                </div>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a href="#" class="mdl-button">Read more</a>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+                            <i class="material-icons">more_vert</i>
+                        </button>
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right">
+                            <li class="mdl-menu__item">Lorem</li>
+                            <li class="mdl-menu__item">Ipsum</li>
+                            <li class="mdl-menu__item">Dolor</li>
                         </ul>
-                    </div>
-                    <div class="mdl-mini-footer--right-section">
-                        <button class="mdl-mini-footer--social-btn">
-                            <img src="images/icons/facebook.png" alt="Facebook">
-                        </button>
-                        <button class="mdl-mini-footer--social-btn">
-                            <img src="images/icons/linkedin.png" alt="LinkedIn">
-                        </button>
-                        <button class="mdl-mini-footer--social-btn">
-                            <img src="images/icons/twitter.png" alt="Twitter">
-                        </button>
-                    </div>
-                </footer>            
+                    </section>                    
+                </div>
+                <%@include file="footer.jsp" %>
             </main>
         </div>                
     </body>
